@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cil.Todo.Core", "Library\Cil.Todo.Core\Cil.Todo.Core.csproj", "{A655EE27-D9E5-4A37-BCAA-DBA937E45FB4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{812E4ADC-BF42-4DD9-81AD-EC6667AB2D78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{542735F4-8D5B-4107-AACD-CC49EB36C3E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cil.Todo.Web", "Presentation\Cil.Todo.Web\Cil.Todo.Web.csproj", "{03B6F7A0-430B-4CD9-886A-6AF66B4939EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +21,16 @@ Global
 		{A655EE27-D9E5-4A37-BCAA-DBA937E45FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A655EE27-D9E5-4A37-BCAA-DBA937E45FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A655EE27-D9E5-4A37-BCAA-DBA937E45FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B6F7A0-430B-4CD9-886A-6AF66B4939EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B6F7A0-430B-4CD9-886A-6AF66B4939EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B6F7A0-430B-4CD9-886A-6AF66B4939EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B6F7A0-430B-4CD9-886A-6AF66B4939EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A655EE27-D9E5-4A37-BCAA-DBA937E45FB4} = {812E4ADC-BF42-4DD9-81AD-EC6667AB2D78}
+		{03B6F7A0-430B-4CD9-886A-6AF66B4939EC} = {542735F4-8D5B-4107-AACD-CC49EB36C3E7}
 	EndGlobalSection
 EndGlobal
