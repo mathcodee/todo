@@ -2,8 +2,8 @@
 {
     public enum GenderType : int
     {
-        Men = 1,
-        Women = 2,
+        Man = 1,
+        Woman = 2,
         Other = 3
     }
 }

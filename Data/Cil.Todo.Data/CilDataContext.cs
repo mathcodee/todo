@@ -42,5 +42,33 @@ namespace Cil.Todo.Data
             base.OnModelCreating(modelBuilder);
         }
 
+        public override int SaveChanges()
+        {
+            /// TODO : Add CreatedUserId and UpdatedUserId 
+            /// http://stackoverflow.com/questions/34578573/entity-framework-7-audit-log
+            var addedAuditedEntities = ChangeTracker.Entries<IAuditEntity>()
+              .Where(p => p.State == EntityState.Added)
+              .Select(p => p.Entity);
+
+            var modifiedAuditedEntities = ChangeTracker.Entries<IAuditEntity>()
+              .Where(p => p.State == EntityState.Modified)
+              .Select(p => p.Entity);
+
+            var now = DateTime.UtcNow;
+
+            foreach (var added in addedAuditedEntities)
+            {
+                added.CreatedDate = now;
+                added.UpdatedDate = now;
+            }
+
+            foreach (var modified in modifiedAuditedEntities)
+            {
+                modified.UpdatedDate = now;
+            }
+
+            return base.SaveChanges();
+        }
+
     }
 }

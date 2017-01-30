@@ -1,6 +1,7 @@
 namespace Cil.Todo.Data.Migrations
 {
     using Domain;
+    using Enum;
     using System;
     using System.Collections.Generic;
     using System.Data.Entity;
@@ -16,6 +17,8 @@ namespace Cil.Todo.Data.Migrations
 
         protected override void Seed(Cil.Todo.Data.CilDataContext context)
         {
+            context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [CTD].[City] ON");
+
             context.Country.AddOrUpdate(p => p.Code,
                 new Country
                 {
@@ -59,7 +62,12 @@ namespace Cil.Todo.Data.Migrations
                         new State { Name = "Hatay", DisplayOrder = -100, RowId = Guid.NewGuid() },
                         new State { Name = "Isparta", DisplayOrder = -100, RowId = Guid.NewGuid() },
                         new State { Name = "Ýçel(Mersin)", DisplayOrder = -100, RowId = Guid.NewGuid() },
-                        new State { Name = "Ýstanbul", DisplayOrder = -100, RowId = Guid.NewGuid() },
+                        new State { Name = "Ýstanbul", DisplayOrder = -100, RowId = Guid.NewGuid(),
+                            Cities = new List<City>()
+                            {
+                                new City { Id= 1, Name = "Þiþli", DisplayOrder =100, RowId = Guid.NewGuid() }
+                            }
+                        },
                         new State { Name = "Ýzmir", DisplayOrder = -100, RowId = Guid.NewGuid() },
                         new State { Name = "Kars", DisplayOrder = -100, RowId = Guid.NewGuid() },
                         new State { Name = "Kastamonu", DisplayOrder = -100, RowId = Guid.NewGuid() },
@@ -112,6 +120,25 @@ namespace Cil.Todo.Data.Migrations
                 }
             );
 
+
+            context.User.AddOrUpdate(p => p.Username,
+                new User
+                {
+                    Name = "Mehmet",
+                    LastName = "KURT",
+                    GenderId = (int)GenderType.Man,
+                    Username = "codeislife",
+                    Password = "d7faef65e9ee2e606f7a0e955f6f46a0",
+                    PasswordSalt = "s0mRIdlKvI",
+                    Email = "team@codeislife.net",
+                    IsActive = true,
+                    IsApproved = true,
+                    CityId = 1,
+                    RowId = Guid.NewGuid()
+                }
+            );
+
+            context.Database.ExecuteSqlCommand(@"SET IDENTITY_INSERT [CTD].[City] OFF");
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Cil.Todo.Data.Domain
         public string Name { get; set; }
         public int StateId { get; set; }
         public State State { get; set; }
-        public int DisplayOrder { get; set; }
+        public short DisplayOrder { get; set; }
 
         public ICollection<User> Users
         {

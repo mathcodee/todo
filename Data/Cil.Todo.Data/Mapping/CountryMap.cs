@@ -10,7 +10,7 @@ namespace Cil.Todo.Data.Mapping
             ToTable("CTD.Country");
             Property(p => p.Name).IsRequired().HasMaxLength(60);
             Property(p => p.Code).IsRequired();
-            Property(p => p.DisplayOrder).IsRequired();
+            Property(p => p.DisplayOrder).HasColumnType("SMALLINT").IsRequired();
         }
     }
 }

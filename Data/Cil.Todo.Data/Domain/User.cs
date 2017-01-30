@@ -1,5 +1,6 @@
 ﻿using Cil.Todo.Data.Enum;
 using System;
+using System.Collections.Generic;
 
 namespace Cil.Todo.Data.Domain
 {
@@ -18,6 +19,13 @@ namespace Cil.Todo.Data.Domain
         public bool IsApproved { get; set; }
         public int CityId { get; set; }
         public City City { get; set; }
+
+        private ICollection<Category> _categories;
+        public ICollection<Category> Categories
+        {
+            get { return _categories ?? (_categories = new List<Category>()); }
+            set { _categories = value; }
+        }
 
         #region IAuditEntity
         public int? CreatedUserId { get; set; }

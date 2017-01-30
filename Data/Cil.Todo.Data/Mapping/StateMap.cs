@@ -9,7 +9,7 @@ namespace Cil.Todo.Data.Mapping
         {
             ToTable("CTD.State");
             Property(p => p.Name).IsRequired().HasMaxLength(50);
-            Property(p => p.DisplayOrder).IsRequired();
+            Property(c => c.DisplayOrder).HasColumnType("SMALLINT").IsRequired();
 
             HasRequired(s => s.Country)
                 .WithMany(c => c.States)

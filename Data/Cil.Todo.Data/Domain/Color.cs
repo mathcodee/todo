@@ -7,6 +7,6 @@
         public byte? Red { get; set; }
         public byte? Green { get; set; }
         public byte? Blue { get; set; }
-        public int DisplayOrder { get; set; }
+        public short DisplayOrder { get; set; }
     }
 }
