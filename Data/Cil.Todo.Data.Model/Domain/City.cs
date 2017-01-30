@@ -1,10 +1,26 @@
-﻿namespace Cil.Todo.Data.Model.Domain
+﻿using System.Collections.Generic;
+
+namespace Cil.Todo.Data.Model.Domain
 {
     public partial class City : BaseEntity
     {
+        private ICollection<User> _users;
+
         public string Name { get; set; }
         public int StateId { get; set; }
         public State State { get; set; }
         public int DisplayOrder { get; set; }
+
+        public ICollection<User> Users
+        {
+            get
+            {
+                return _users ?? (_users = new List<User>());
+            }
+            protected set
+            {
+                _users = value;
+            }
+        }
     }
 }

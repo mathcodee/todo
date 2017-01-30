@@ -1,10 +1,5 @@
 ﻿using Cil.Todo.Data.Model.Domain;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cil.Todo.Data.Model.Mapping
 {
@@ -27,8 +22,9 @@ namespace Cil.Todo.Data.Model.Mapping
             Property(p => p.IsApproved).IsRequired();
             Property(p => p.CityId).IsRequired();
 
-            HasRequired(p => p.City)
-                .WithMany(m => m.Id)
+
+            HasRequired(u => u.City)
+                .WithMany(c => c.Users)
                 .HasForeignKey(u => u.CityId);
         }
     }
