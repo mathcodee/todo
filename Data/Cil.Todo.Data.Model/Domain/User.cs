@@ -8,6 +8,7 @@ namespace Cil.Todo.Data.Model.Domain
         public string Name { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
+        public byte GenderId { get; set; }
         public GenderType Gender { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
