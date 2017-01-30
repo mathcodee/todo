@@ -15,8 +15,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{78770305-4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cil.Todo.Data", "Data\Cil.Todo.Data\Cil.Todo.Data.csproj", "{25A674FA-EF47-4AF3-A50F-948A90D2988F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cil.Todo.Data.Model", "Data\Cil.Todo.Data.Model\Cil.Todo.Data.Model.csproj", "{67415045-4107-418D-B112-232E42383293}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{25A674FA-EF47-4AF3-A50F-948A90D2988F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25A674FA-EF47-4AF3-A50F-948A90D2988F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25A674FA-EF47-4AF3-A50F-948A90D2988F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67415045-4107-418D-B112-232E42383293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67415045-4107-418D-B112-232E42383293}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67415045-4107-418D-B112-232E42383293}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67415045-4107-418D-B112-232E42383293}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +41,5 @@ Global
 		{A655EE27-D9E5-4A37-BCAA-DBA937E45FB4} = {812E4ADC-BF42-4DD9-81AD-EC6667AB2D78}
 		{03B6F7A0-430B-4CD9-886A-6AF66B4939EC} = {542735F4-8D5B-4107-AACD-CC49EB36C3E7}
 		{25A674FA-EF47-4AF3-A50F-948A90D2988F} = {78770305-46B4-4112-AF72-42F8DB6CAD71}
-		{67415045-4107-418D-B112-232E42383293} = {78770305-46B4-4112-AF72-42F8DB6CAD71}
 	EndGlobalSection
 EndGlobal
