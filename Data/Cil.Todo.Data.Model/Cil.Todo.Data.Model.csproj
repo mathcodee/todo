@@ -41,9 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Domain\Category.cs" />
+    <Compile Include="Domain\City.cs" />
+    <Compile Include="Domain\Color.cs" />
+    <Compile Include="Domain\Country.cs" />
+    <Compile Include="Domain\State.cs" />
+    <Compile Include="Domain\Todo.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Enum\GenderType.cs" />
     <Compile Include="IAuditEntity.cs" />
+    <Compile Include="IDeletedEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
